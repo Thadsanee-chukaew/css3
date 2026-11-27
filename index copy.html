@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>แบบฟอร์มลงทะเบียนนักศึกษาใหม่</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <!-- ข้อ 1: เชื่อมโยงไฟล์ style.css แบบ External Style -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header id="main-header">
+    <h1>ระบบลงทะเบียน<span class="highlight-text">นักศึกษาใหม่</span></h1>
+    <p>กรุณากรอกข้อมูลให้ครบถ้วนและถูกต้อง เพื่อใช้ในการลงทะเบียนเข้าศึกษา <span class="required-mark">(* จำเป็นต้องกรอก)</span></p>
+  </header>
+
+  <main>
+    <div class="form-container">
+      <form action="#" method="post">
+
+        <fieldset>
+          <legend>ข้อมูลการเข้าสู่ระบบ</legend>
+
+          <div class="form-group">
+            <label for="username">ชื่อผู้ใช้ (Username): <span class="required-mark">*</span></label>
+            <input type="text" id="username" name="username" placeholder="ระบุชื่อผู้ใช้สำหรับเข้าสู่ระบบ" required />
+          </div>
+
+          <div class="form-group">
+            <label for="password">รหัสผ่าน (Password): <span class="required-mark">*</span></label>
+            <input type="password" id="password" name="password" placeholder="ระบุรหัสผ่านอย่างน้อย 6 ตัวอักษร" required />
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>ข้อมูลส่วนตัว</legend>
+
+          <div class="form-group">
+            <label for="fullname">ชื่อ-นามสกุล: <span class="required-mark">*</span></label>
+            <input type="text" id="fullname" name="fullname" placeholder="เช่น นางสาว ทัศณี ชูแก้ว" required />
+          </div>
+
+          <div class="form-group">
+            <label for="email">อีเมล: <span class="required-mark">*</span></label>
+            <input type="email" id="email" name="email" placeholder="example@email.com" required />
+          </div>
+
+          <div class="form-group">
+            <label for="birthdate">วัน/เดือน/ปีเกิด: <span class="required-mark">*</span></label>
+            <input type="date" id="birthdate" name="birthdate" required />
+          </div>
+
+          <div class="form-group">
+            <label>เพศ:</label>
+            <div class="inline-options">
+              <input type="radio" id="gender-male" name="gender" value="ชาย" checked />
+              <label for="gender-male">ชาย</label>
+
+              <input type="radio" id="gender-female" name="gender" value="หญิง" />
+              <label for="gender-female">หญิง</label>
+
+              <input type="radio" id="gender-other" name="gender" value="อื่นๆ" />
+              <label for="gender-other">อื่นๆ</label>
+            </div>
+          </div>
+        </fieldset>
+
+   
+        <fieldset>
+          <legend>ข้อมูลการศึกษา</legend>
+          <div class="form-group">
+            <label for="level">ระดับชั้น:</label>
+            <select id="level" name="level">
+              <option value="ปวช.1">ปวช.1</option>
+              <option value="ปวช.2">ปวช.2</option>
+              <option value="ปวช.3">ปวช.3</option>
+              <option value="ปวส.1">ปวส.1</option>
+              <option value="ปวส.2">ปวส.2</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>ความสนใจเพิ่มเติม:</label>
+            <div class="inline-options">
+              <input type="checkbox" id="interest-web" name="interests" value="Web Design" />
+              <label for="interest-web">Web Design</label>
+
+              <input type="checkbox" id="interest-db" name="interests" value="Database" />
+              <label for="interest-db">Database</label>
+
+              <input type="checkbox" id="interest-coding" name="interests" value="Coding" />
+              <label for="interest-coding">Coding</label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="address">ที่อยู่ปัจจุบัน:</label>
+            <textarea id="address" name="address" rows="4" placeholder="กรอกที่อยู่ปัจจุบันที่สามารถติดต่อได้..."></textarea>
+          </div>
+        </fieldset>
+
+        <div class="button-group">
+          <button type="submit" class="btn-submit">ลงทะเบียน</button>
+          <button type="reset" class="btn-reset">ล้างข้อมูล</button>
+        </div>
+
+      </form>
+    </div>
+  </main>
+
+  <footer id="main-footer">
+    <p>&copy; 2026 งานทะเบียนและวัดผล | ระบบลงทะเบียนนักศึกษาใหม่</p>
+  </footer>
+
+</body>
+</html>
